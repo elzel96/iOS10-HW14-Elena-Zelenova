@@ -16,6 +16,10 @@
 		7929685F2A6FF7A600411177 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929685E2A6FF7A600411177 /* CellHeader.swift */; };
 		792968612A6FFA8E00411177 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968602A6FFA8E00411177 /* AlbumCell.swift */; };
 		792968632A70339500411177 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968622A70339500411177 /* TableCell.swift */; };
+		792968652A70663A00411177 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968642A70663A00411177 /* TabBarController.swift */; };
+		792968672A70669500411177 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968662A70669500411177 /* ForYouViewController.swift */; };
+		792968692A7066C400411177 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968682A7066C400411177 /* LibraryViewController.swift */; };
+		7929686B2A70670D00411177 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929686A2A70670D00411177 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		7929685E2A6FF7A600411177 /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
 		792968602A6FFA8E00411177 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		792968622A70339500411177 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		792968642A70663A00411177 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		792968662A70669500411177 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		792968682A7066C400411177 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		7929686A2A70670D00411177 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				792968462A6FE7D100411177 /* AlbumsViewController.swift */,
+				792968642A70663A00411177 /* TabBarController.swift */,
+				792968662A70669500411177 /* ForYouViewController.swift */,
+				792968682A7066C400411177 /* LibraryViewController.swift */,
+				7929686A2A70670D00411177 /* SearchViewController.swift */,
 				7929685D2A6FF73B00411177 /* Cell */,
 				7929685A2A6FF2B000411177 /* Model */,
 			);
@@ -195,12 +207,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7929685F2A6FF7A600411177 /* CellHeader.swift in Sources */,
+				7929686B2A70670D00411177 /* SearchViewController.swift in Sources */,
+				792968652A70663A00411177 /* TabBarController.swift in Sources */,
 				792968472A6FE7D100411177 /* AlbumsViewController.swift in Sources */,
 				792968432A6FE7D100411177 /* AppDelegate.swift in Sources */,
 				792968632A70339500411177 /* TableCell.swift in Sources */,
 				792968452A6FE7D100411177 /* SceneDelegate.swift in Sources */,
+				792968692A7066C400411177 /* LibraryViewController.swift in Sources */,
 				7929685C2A6FF2CA00411177 /* Model.swift in Sources */,
 				792968612A6FFA8E00411177 /* AlbumCell.swift in Sources */,
+				792968672A70669500411177 /* ForYouViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
