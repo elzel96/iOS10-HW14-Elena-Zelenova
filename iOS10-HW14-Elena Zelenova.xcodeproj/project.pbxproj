@@ -12,6 +12,7 @@
 		792968472A6FE7D100411177 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968462A6FE7D100411177 /* AlbumsViewController.swift */; };
 		7929684C2A6FE7D100411177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7929684B2A6FE7D100411177 /* Assets.xcassets */; };
 		7929684F2A6FE7D100411177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */; };
+		7929685C2A6FF2CA00411177 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929685B2A6FF2CA00411177 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7929684B2A6FE7D100411177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7929684E2A6FE7D100411177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		792968502A6FE7D100411177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7929685B2A6FF2CA00411177 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				792968462A6FE7D100411177 /* AlbumsViewController.swift */,
+				7929685A2A6FF2B000411177 /* Model */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -94,6 +97,14 @@
 				7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		7929685A2A6FF2B000411177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7929685B2A6FF2CA00411177 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				792968472A6FE7D100411177 /* AlbumsViewController.swift in Sources */,
 				792968432A6FE7D100411177 /* AppDelegate.swift in Sources */,
 				792968452A6FE7D100411177 /* SceneDelegate.swift in Sources */,
+				7929685C2A6FF2CA00411177 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
