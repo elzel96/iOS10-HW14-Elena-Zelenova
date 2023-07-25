@@ -52,11 +52,11 @@ class DataManager {
                                 Model(image: "livephoto", title: "Фото Live Photos", number: "300"),
                                 Model(image: "cube", title: "Портреты", number: "57"),
                                 Model(image: "pano", title: "Панорамы", number: "5"),
-                                Model(image: "square.stack.3d.down.right", title: "Серии", number: "4")
+                                Model(image: "square.stack.3d.down.right", title: "Серии", number: "4"),
+                                Model(image: "square.stack.3d.forward.dottedline", title: "Анимированные", number: "44")
                             ]),
             SectionModel(title: "Другое", buttonIsHiden: true, item:
                             [
-                                Model(image: "square.stack.3d.forward.dottedline", title: "Анимированные", number: "44"),
                                 Model(image: "square.and.arrow.down", title: "Импортированные", number: "2"),
                                 Model(image: "eye.slash", title: "Скрытые", number: "3"),
                                 Model(image: "trash", title: "Недавно удаленные", number: "1200")

@@ -16,6 +16,7 @@ class AlbumsViewController: UIViewController {
     private lazy var collection: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.register(AlbumCell.self, forCellWithReuseIdentifier: AlbumCell.identifier)
+        collectionView.register(TableCell.self, forCellWithReuseIdentifier: TableCell.identifier)
         collectionView.register(CellHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellHeader.identifier)
         collectionView.dataSource = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,6 +73,10 @@ extension AlbumsViewController: UICollectionViewDataSource {
             return model[0].item.count
         case 1:
             return model[1].item.count
+        case 2:
+            return model[2].item.count
+        case 3:
+            return model[3].item.count
         default:
             return 0
         }
@@ -86,7 +91,13 @@ extension AlbumsViewController: UICollectionViewDataSource {
             item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
             return item ?? UICollectionViewCell()
         default:
-            let item = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCell.identifier, for: indexPath) as? AlbumCell
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: TableCell.identifier, for: indexPath) as? TableCell
+            if indexPath.item == 0 {
+                item?.lineSeparator.backgroundColor = .white
+            }
+            item?.iconView.image = UIImage(systemName: model[indexPath.section].item[indexPath.item].image)
+            item?.nameLabel.text = model[indexPath.section].item[indexPath.item].title
+            item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
             return item ?? UICollectionViewCell()
         }
     }
@@ -221,7 +232,7 @@ extension AlbumsViewController {
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 item.contentInsets = NSDirectionalEdgeInsets(
-                    top: 20,
+                    top: 0,
                     leading: 0,
                     bottom: 0,
                     trailing: 0
