@@ -73,15 +73,15 @@ class CellHeader: UICollectionReusableView {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             separator.heightAnchor.constraint(equalToConstant: 1),
-            separator.topAnchor.constraint(equalTo: self.topAnchor),
-            separator.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            separator.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            separator.topAnchor.constraint(equalTo: topAnchor),
+            separator.trailingAnchor.constraint(equalTo: trailingAnchor),
+            separator.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             
-            titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             
-            button.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+            button.centerYAnchor.constraint(equalTo: centerYAnchor),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
  }
