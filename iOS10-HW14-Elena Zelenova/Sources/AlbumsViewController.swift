@@ -68,18 +68,7 @@ extension AlbumsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return model[0].item.count
-        case 1:
-            return model[1].item.count
-        case 2:
-            return model[2].item.count
-        case 3:
-            return model[3].item.count
-        default:
-            return 0
-        }
+        model[section].item.count // не усложняй)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
