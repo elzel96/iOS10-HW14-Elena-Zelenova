@@ -62,9 +62,9 @@ final class AlbumCell: UICollectionViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            photoImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            photoImageView.topAnchor.constraint(equalTo: topAnchor),
+            photoImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            photoImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             photoImageView.heightAnchor.constraint(equalTo: photoImageView.widthAnchor),
             
             namePhotoLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 5),
