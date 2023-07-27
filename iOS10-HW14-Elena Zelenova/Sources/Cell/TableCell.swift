@@ -82,23 +82,23 @@ final class TableCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             iconView.heightAnchor.constraint(equalToConstant: 28),
             iconView.widthAnchor.constraint(equalToConstant: 28),
-            iconView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            iconView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4),
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
             
             lineSeparator.heightAnchor.constraint(equalToConstant: 1),
-            lineSeparator.topAnchor.constraint(equalTo: self.topAnchor),
-            lineSeparator.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            lineSeparator.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            lineSeparator.topAnchor.constraint(equalTo: topAnchor),
+            lineSeparator.trailingAnchor.constraint(equalTo: trailingAnchor),
+            lineSeparator.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             
-            nameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 48),
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 48),
             
             button.heightAnchor.constraint(equalToConstant: 28),
             button.widthAnchor.constraint(equalToConstant: 28),
-            button.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            button.centerYAnchor.constraint(equalTo: centerYAnchor),
             button.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -3),
             
-            numberPhotosLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            numberPhotosLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             numberPhotosLabel.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -1)
         ])
     }
