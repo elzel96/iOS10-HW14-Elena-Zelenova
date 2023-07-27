@@ -125,11 +125,21 @@ extension AlbumsViewController {
                     heightDimension: .absolute(399)
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: groupSize,
-                    repeatingSubitem: item,
-                    count: 2
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        repeatingSubitem: item,
+                        count: 2
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        subitem: item,
+                        count: 2
+                    )
+                }
                 
                 group.interItemSpacing = .fixed(55)
                 
@@ -175,11 +185,21 @@ extension AlbumsViewController {
                     heightDimension: .absolute(220)
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: groupSize,
-                    repeatingSubitem: item,
-                    count: 1
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        repeatingSubitem: item,
+                        count: 1
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        subitem: item,
+                        count: 1
+                    )
+                }
                 
                 group.interItemSpacing = .fixed(88)
                 
@@ -227,11 +247,21 @@ extension AlbumsViewController {
                     trailing: 0
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: itemSize,
-                    repeatingSubitem: item,
-                    count: 1
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: itemSize,
+                        repeatingSubitem: item,
+                        count: 1
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: itemSize,
+                        subitem: item,
+                        count: 1
+                    )
+                }
                 
                 let section = NSCollectionLayoutSection(group: group)
                 
