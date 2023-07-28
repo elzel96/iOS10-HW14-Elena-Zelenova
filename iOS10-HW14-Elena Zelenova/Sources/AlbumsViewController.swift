@@ -68,33 +68,25 @@ extension AlbumsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        model[section].item.count // не усложняй)
+        model[section].item.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0, 1:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCell.identifier, for: indexPath) as? AlbumCell
-            item?.photoImageView.image = UIImage(named: model[indexPath.section].item[indexPath.item].image)
-            item?.namePhotoLabel.text = model[indexPath.section].item[indexPath.item].title
-            item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
+            item?.configureCell(item: model[indexPath.section].item[indexPath.item])
             return item ?? UICollectionViewCell()
         default:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: TableCell.identifier, for: indexPath) as? TableCell
-            if indexPath.item == 0 {
-                item?.lineSeparator.backgroundColor = .white
-            }
-            item?.iconView.image = UIImage(systemName: model[indexPath.section].item[indexPath.item].image)
-            item?.nameLabel.text = model[indexPath.section].item[indexPath.item].title
-            item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
+            item?.configureCell(item: model[indexPath.section].item[indexPath.item])
             return item ?? UICollectionViewCell()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellHeader.identifier, for: indexPath) as? CellHeader else { return UICollectionReusableView() }
-        header.title = model[indexPath.section].title
-        header.buttonIsHiden = model[indexPath.section].buttonIsHiden
+        header.configureHeader(sectionModel: model[indexPath.section])
         return header
     }
 }
@@ -125,11 +117,21 @@ extension AlbumsViewController {
                     heightDimension: .absolute(399)
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: groupSize,
-                    repeatingSubitem: item,
-                    count: 2
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        repeatingSubitem: item,
+                        count: 2
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        subitem: item,
+                        count: 2
+                    )
+                }
                 
                 group.interItemSpacing = .fixed(55)
                 
@@ -175,11 +177,21 @@ extension AlbumsViewController {
                     heightDimension: .absolute(220)
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: groupSize,
-                    repeatingSubitem: item,
-                    count: 1
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        repeatingSubitem: item,
+                        count: 1
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: groupSize,
+                        subitem: item,
+                        count: 1
+                    )
+                }
                 
                 group.interItemSpacing = .fixed(88)
                 
@@ -227,11 +239,21 @@ extension AlbumsViewController {
                     trailing: 0
                 )
                 
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: itemSize,
-                    repeatingSubitem: item,
-                    count: 1
-                )
+                let group: NSCollectionLayoutGroup
+                
+                if #available(iOS 16.0, *) {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: itemSize,
+                        repeatingSubitem: item,
+                        count: 1
+                    )
+                } else {
+                    group = NSCollectionLayoutGroup.vertical(
+                        layoutSize: itemSize,
+                        subitem: item,
+                        count: 1
+                    )
+                }
                 
                 let section = NSCollectionLayoutSection(group: group)
                 

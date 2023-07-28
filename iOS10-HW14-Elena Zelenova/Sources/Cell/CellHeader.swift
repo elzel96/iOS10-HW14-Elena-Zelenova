@@ -10,18 +10,6 @@ import UIKit
 class CellHeader: UICollectionReusableView {
     
     static let identifier = "CellHeader"
-    
-     var title: String? {
-         didSet {
-             titleLabel.text = title
-         }
-     }
-    
-     var buttonIsHiden: Bool? {
-         didSet {
-             button.isHidden = buttonIsHiden ?? true
-         }
-     }
 
      // MARK: - Outlets
 
@@ -83,5 +71,10 @@ class CellHeader: UICollectionReusableView {
             button.centerYAnchor.constraint(equalTo: centerYAnchor),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
+    }
+    
+    func configureHeader(sectionModel: SectionModel) {
+        titleLabel.text = sectionModel.title
+        button.isHidden = sectionModel.buttonIsHiden ?? true
     }
  }

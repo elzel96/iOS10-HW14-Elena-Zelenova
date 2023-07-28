@@ -13,7 +13,7 @@ final class AlbumCell: UICollectionViewCell {
     
     // MARK: - Outlets
     
-    lazy var photoImageView: UIImageView = {
+    private lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 10
         imageView.contentMode = .scaleAspectFill
@@ -23,7 +23,7 @@ final class AlbumCell: UICollectionViewCell {
         return imageView
     }()
     
-    lazy var namePhotoLabel: UILabel = {
+    private lazy var namePhotoLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 17)
@@ -31,7 +31,7 @@ final class AlbumCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var numberPhotosLabel: UILabel = {
+    private lazy var numberPhotosLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 17)
@@ -71,6 +71,12 @@ final class AlbumCell: UICollectionViewCell {
             
             numberPhotosLabel.topAnchor.constraint(equalTo: namePhotoLabel.bottomAnchor, constant: 5)
         ])
+    }
+    
+    func configureCell(item: Model) {
+        photoImageView.image = UIImage(named: item.image)
+        namePhotoLabel.text = item.title
+        numberPhotosLabel.text = item.number
     }
 }
 

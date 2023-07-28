@@ -13,7 +13,7 @@ final class TableCell: UICollectionViewCell {
     
     // MARK: - Outlets
     
-    lazy var iconView: UIImageView = {
+    private lazy var iconView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -22,7 +22,7 @@ final class TableCell: UICollectionViewCell {
         return imageView
     }()
     
-    lazy var nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 20, weight: .regular)
@@ -31,7 +31,7 @@ final class TableCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var numberPhotosLabel: UILabel = {
+    private lazy var numberPhotosLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 17, weight: .regular)
@@ -40,7 +40,7 @@ final class TableCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.layer.masksToBounds = true
         let image = UIImage(systemName: "chevron.right", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16, weight: .semibold))?.withTintColor(.systemGray4, renderingMode: .alwaysOriginal)
@@ -49,9 +49,8 @@ final class TableCell: UICollectionViewCell {
         return button
     }()
     
-    lazy var lineSeparator: UIView = {
+    private lazy var lineSeparator: UIView = {
         let line = UIView()
-        line.backgroundColor = .systemGray4
         line.translatesAutoresizingMaskIntoConstraints = false
         return line
     }()
@@ -102,6 +101,15 @@ final class TableCell: UICollectionViewCell {
             numberPhotosLabel.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -1)
         ])
     }
+    
+    func configureCell(item: Model) {
+        if item.separatorIsHiden == true {
+            lineSeparator.backgroundColor = .white
+        } else {
+            lineSeparator.backgroundColor = .systemGray4
+        }
+        iconView.image = UIImage(systemName: item.image)
+        nameLabel.text = item.title
+        numberPhotosLabel.text = item.number
+    }
 }
-
-
