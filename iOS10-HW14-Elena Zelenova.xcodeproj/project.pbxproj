@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		792968432A6FE7D100411177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968422A6FE7D100411177 /* AppDelegate.swift */; };
 		792968452A6FE7D100411177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968442A6FE7D100411177 /* SceneDelegate.swift */; };
-		792968472A6FE7D100411177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968462A6FE7D100411177 /* ViewController.swift */; };
-		7929684A2A6FE7D100411177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792968482A6FE7D100411177 /* Main.storyboard */; };
+		792968472A6FE7D100411177 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968462A6FE7D100411177 /* AlbumsViewController.swift */; };
 		7929684C2A6FE7D100411177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7929684B2A6FE7D100411177 /* Assets.xcassets */; };
 		7929684F2A6FE7D100411177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */; };
+		7929685C2A6FF2CA00411177 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929685B2A6FF2CA00411177 /* Model.swift */; };
+		7929685F2A6FF7A600411177 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929685E2A6FF7A600411177 /* CellHeader.swift */; };
+		792968612A6FFA8E00411177 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968602A6FFA8E00411177 /* AlbumCell.swift */; };
+		792968632A70339500411177 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968622A70339500411177 /* TableCell.swift */; };
+		792968652A70663A00411177 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968642A70663A00411177 /* TabBarController.swift */; };
+		792968672A70669500411177 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968662A70669500411177 /* ForYouViewController.swift */; };
+		792968692A7066C400411177 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792968682A7066C400411177 /* LibraryViewController.swift */; };
+		7929686B2A70670D00411177 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929686A2A70670D00411177 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7929683F2A6FE7D100411177 /* iOS10-HW14-Elena Zelenova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS10-HW14-Elena Zelenova.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		792968422A6FE7D100411177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		792968442A6FE7D100411177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		792968462A6FE7D100411177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		792968492A6FE7D100411177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		792968462A6FE7D100411177 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		7929684B2A6FE7D100411177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7929684E2A6FE7D100411177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		792968502A6FE7D100411177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7929685B2A6FF2CA00411177 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7929685E2A6FF7A600411177 /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
+		792968602A6FFA8E00411177 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		792968622A70339500411177 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		792968642A70663A00411177 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		792968662A70669500411177 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		792968682A7066C400411177 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		7929686A2A70670D00411177 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,70 @@
 		792968412A6FE7D100411177 /* iOS10-HW14-Elena Zelenova */ = {
 			isa = PBXGroup;
 			children = (
-				792968422A6FE7D100411177 /* AppDelegate.swift */,
-				792968442A6FE7D100411177 /* SceneDelegate.swift */,
-				792968462A6FE7D100411177 /* ViewController.swift */,
-				792968482A6FE7D100411177 /* Main.storyboard */,
-				7929684B2A6FE7D100411177 /* Assets.xcassets */,
-				7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */,
-				792968502A6FE7D100411177 /* Info.plist */,
+				792968562A6FE89200411177 /* App */,
+				792968572A6FE91C00411177 /* Sources */,
+				792968592A6FE9AB00411177 /* UI */,
+				792968582A6FE94500411177 /* Resources */,
 			);
 			path = "iOS10-HW14-Elena Zelenova";
+			sourceTree = "<group>";
+		};
+		792968562A6FE89200411177 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				792968422A6FE7D100411177 /* AppDelegate.swift */,
+				792968442A6FE7D100411177 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		792968572A6FE91C00411177 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				792968462A6FE7D100411177 /* AlbumsViewController.swift */,
+				792968642A70663A00411177 /* TabBarController.swift */,
+				792968662A70669500411177 /* ForYouViewController.swift */,
+				792968682A7066C400411177 /* LibraryViewController.swift */,
+				7929686A2A70670D00411177 /* SearchViewController.swift */,
+				7929685D2A6FF73B00411177 /* Cell */,
+				7929685A2A6FF2B000411177 /* Model */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		792968582A6FE94500411177 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7929684B2A6FE7D100411177 /* Assets.xcassets */,
+				792968502A6FE7D100411177 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		792968592A6FE9AB00411177 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7929685A2A6FF2B000411177 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7929685B2A6FF2CA00411177 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7929685D2A6FF73B00411177 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7929685E2A6FF7A600411177 /* CellHeader.swift */,
+				792968602A6FFA8E00411177 /* AlbumCell.swift */,
+				792968622A70339500411177 /* TableCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +196,6 @@
 			files = (
 				7929684F2A6FE7D100411177 /* LaunchScreen.storyboard in Resources */,
 				7929684C2A6FE7D100411177 /* Assets.xcassets in Resources */,
-				7929684A2A6FE7D100411177 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +206,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				792968472A6FE7D100411177 /* ViewController.swift in Sources */,
+				7929685F2A6FF7A600411177 /* CellHeader.swift in Sources */,
+				7929686B2A70670D00411177 /* SearchViewController.swift in Sources */,
+				792968652A70663A00411177 /* TabBarController.swift in Sources */,
+				792968472A6FE7D100411177 /* AlbumsViewController.swift in Sources */,
 				792968432A6FE7D100411177 /* AppDelegate.swift in Sources */,
+				792968632A70339500411177 /* TableCell.swift in Sources */,
 				792968452A6FE7D100411177 /* SceneDelegate.swift in Sources */,
+				792968692A7066C400411177 /* LibraryViewController.swift in Sources */,
+				7929685C2A6FF2CA00411177 /* Model.swift in Sources */,
+				792968612A6FFA8E00411177 /* AlbumCell.swift in Sources */,
+				792968672A70669500411177 /* ForYouViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		792968482A6FE7D100411177 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				792968492A6FE7D100411177 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7929684D2A6FE7D100411177 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +357,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 544C5YL5XT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS10-HW14-Elena Zelenova/Info.plist";
+				INFOPLIST_FILE = "iOS10-HW14-Elena Zelenova/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +385,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 544C5YL5XT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS10-HW14-Elena Zelenova/Info.plist";
+				INFOPLIST_FILE = "iOS10-HW14-Elena Zelenova/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
