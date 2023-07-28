@@ -68,33 +68,25 @@ extension AlbumsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        model[section].item.count // не усложняй)
+        model[section].item.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0, 1:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCell.identifier, for: indexPath) as? AlbumCell
-            item?.photoImageView.image = UIImage(named: model[indexPath.section].item[indexPath.item].image)
-            item?.namePhotoLabel.text = model[indexPath.section].item[indexPath.item].title
-            item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
+            item?.configureCell(item: model[indexPath.section].item[indexPath.item])
             return item ?? UICollectionViewCell()
         default:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: TableCell.identifier, for: indexPath) as? TableCell
-            if indexPath.item == 0 {
-                item?.lineSeparator.backgroundColor = .white
-            }
-            item?.iconView.image = UIImage(systemName: model[indexPath.section].item[indexPath.item].image)
-            item?.nameLabel.text = model[indexPath.section].item[indexPath.item].title
-            item?.numberPhotosLabel.text = model[indexPath.section].item[indexPath.item].number
+            item?.configureCell(item: model[indexPath.section].item[indexPath.item])
             return item ?? UICollectionViewCell()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellHeader.identifier, for: indexPath) as? CellHeader else { return UICollectionReusableView() }
-        header.title = model[indexPath.section].title
-        header.buttonIsHiden = model[indexPath.section].buttonIsHiden
+        header.configureHeader(sectionModel: model[indexPath.section])
         return header
     }
 }
